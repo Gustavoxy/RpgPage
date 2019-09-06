@@ -1,0 +1,912 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Tahoma;
+	font-size: 12px;
+}
+/*Importando uma fonta da minha pasta*/
+@font-face {
+	font-family: "Minha Fonte";/*Nome que dei para minha fonte*/
+	src: url(../fontes/texgyrebonum-regular.otf);
+}
+@font-face {
+	font-family: "Tiamat";
+	src: url(../fontes/tiamat.otf);
+}
+a {
+	text-decoration: none;
+}
+/*Setendo o img menu responsivo para nao aparecer*/
+.menu_mobile {
+	display: none;
+}
+/***************TOP***************/
+.topo {
+	height: 30px;
+	background-color: #333333;
+}
+.insidetopo {
+	height: 30px;
+	width: 100%;
+	max-width: 1040px;
+	margin: auto;
+}
+.topoleft {
+	float: left;
+	height: 30px;
+	width: 50%;
+}
+.toporight {
+	float: right;
+	height: 28px;/*Compensar: -2px pq demos mais 2px de margin-top*/
+	width: 50%;
+	margin-top: 2px;/*Para alinhar a div*/
+}
+.topoleft ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/*Removendo todos os espaçamentos*/
+}
+.topoleft li {
+	height: 30px;
+	line-height: 30px;
+	padding-left: 8px;
+	padding-right: 8px;
+	float: left;
+	/* Ou display: inline-block;*/
+}
+.topoleft li a {
+	text-decoration: none;
+	color: #FFF;
+}
+.topoleft li a:active {
+	color: red;
+}
+.topoleft ul li:hover {
+	cursor: pointer;
+	background-color: #474646;
+}
+.topobusca {
+	margin-right: 4px;
+	width: 120px;
+	height: 19px;
+	outline: 0;/*Remove realce AZUL no input*/	
+}
+/*Alinhando/"Jogando" os menus à direita*/
+.toporight a {
+	float: right; /*INVERTEU a ordem do html. REVERTER no HTML*/
+}
+/*Alinhando/"Jogando" à direita*/
+.toporight input {
+	float: right; /*INVERTEU a ordem do html. REVERTER no HTML*/
+
+}
+.toporight img {
+	margin-right: 4px;
+}
+/***************TOP***************/
+
+/***************TOP2***************/
+.top2 {
+	height: 95px;
+}
+.top2inside {
+	width: 100%;
+	max-width: 1040px;
+	height: 95px;
+	margin: auto;
+}
+.logo {
+	width: 230px;
+	height: 95px;
+	float: left;
+}
+.top2 .banner {
+	color: white;
+	font-size: 16px;
+	width: 650px;
+	height: 80px;
+	float: right;
+	background-color: red;
+	margin-top: 7px;
+	background-image: url(../images/pub.jpg);
+	background-size: 95%;
+	background-image: cover;
+	background-position: center;
+	transition: all 1s linear
+}
+.top2 .banner:hover {
+	cursor: pointer;
+	background-size: 100%;
+	transition: all 1s linear
+	;
+}
+/***************TOP2***************/
+
+/***************MENU***************/
+.menu {
+	height: 40px;
+	background-color: #FF0000;
+}
+.insidemenu {
+	width: 100%;
+	max-width: 1040px;
+	margin: auto;
+	height: 40px;
+}
+.menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu li {
+	float: left;
+	padding-left: 8px;
+	padding-right: 8px;
+	height: 40px;
+	line-height: 40px;
+	color: white;
+	font-size: 15px;
+	cursor: pointer;
+}
+.menu li:hover {
+	background-color: #c91a1a;
+}
+.insidemenu li a {
+	color: white;
+	text-decoration: none;
+}
+.subsist { /*MENU DROPDOWN OCULTO*/
+	margin-left: -8px;
+	width: 140px;
+	/*não possui altura pois é flexives de acordo com a qtd de DIVs que sao as opçoes*/
+	background-color: #FF0000;
+	position: absolute;
+	display: none;
+}
+.subcena { /*MENU DROPDOWN OCULTO*/
+	margin-left: -8px;
+	width: 140px;
+	/*não possui altura pois é flexives de acordo com a qtd de DIVs que sao as opçoes*/
+	background-color: #FF0000;
+	position: absolute;
+	display: none;
+}
+.subavent { /*MENU DROPDOWN OCULTO*/
+	margin-left: -8px;
+	width: 140px;
+	/*não possui altura pois é flexives de acordo com a qtd de DIVs que sao as opçoes*/
+	background-color: #FF0000;
+	position: absolute;
+	display: none;
+}
+.menu li:hover .subsist { /*MENU DROPDOWN revelado*/
+	/*Quando passar o Mouse, vai entrar em .subsist e aplicar o sequinte:*/
+	display: block;
+	transition: all 1s linear;
+}
+.menu li:hover .subcena { /*MENU DROPDOWN revelado*/
+	/*Quando passar o Mouse, vai entrar em .subsist e aplicar o sequinte:*/
+	display: block;
+	transition: all 1s linear;
+}
+.menu li:hover .subavent { /*MENU DROPDOWN revelado*/
+	/*Quando passar o Mouse, vai entrar em .subsist e aplicar o sequinte:*/
+	display: block;
+	transition: all 1s linear;
+}
+.opcoesmenu {
+	padding-left: 5px;
+	height: 40px;
+	line-height: 40px;
+}
+.opcoesmenu:hover {
+	background-color: #c91a1a;
+}
+.opcoesmenu a:active {
+	color: red;
+}
+/*DIV/menu INTEIRO*/
+.subgurps {/*MENU DROPDOWN OCULTO*/
+	margin-left: 135px;
+	margin-top: -40px;
+	width: 140px;
+	background-color: #FF0000;
+	position: absolute;
+	display: none;
+}
+/*opcoes de dentro da div. Que são as DIVS*/
+.opcoesgurps {
+	height: 40px;
+	line-height: 40px;
+	padding-left: 5px;
+}
+.subavent div:hover .subgurps {
+	display: block;
+}
+.opcoesgurps:hover {
+	background-color: #c91a1a;;
+}
+/***************MENU***************/
+
+/***************ULTIMAS NOTICIAS***************/
+.ultimasnoticias {
+	height: 40px;	
+}
+.ultimasinside {
+	width: 100%;
+	max-width: 1040px;
+	height: 40px;
+	margin: auto;
+		
+}
+.noticias {
+	height: 28px;
+	background-color: #FFF;
+	border: 1px solid grey;
+	margin-top: 10px; /*50px - 30(h28+borderTop1+1Bott=30) =20px/2 =10*/
+}
+.titulonoticias {
+	height: 28px;
+	background-color: #FF0000;
+	color: white;
+	font-size: 15px;/*Tamanho do texto influencia no position do elemento*/
+	display: inline-block;
+	line-height: 28px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.areanoticias {
+	height: 28px;
+	line-height: 28px;
+	display: inline-block;
+	font-size: 15px;
+	color: grey;
+	padding-left: 5px;
+}
+/***************ULTIMAS NOTICIAS***************/
+
+/***************CONTAINERINSIDE***************/
+.container {
+	background-color: white;
+}
+.containerinside {
+	width: 100%;
+	max-width: 1040px;
+	background-color: grey;
+	margin: auto;
+}
+/*<------Rightside------>*/
+.rightside {
+	width: 275px;
+	height: 300px;/*TEMP*/
+	color: #FFFFFF;
+	float: right;
+	margin-left: 12px;
+	/*background-color: grey;*/
+}
+.widget {
+	border: 1px solid grey;
+	margin-bottom: 10px;
+}
+.widget_title {
+	background-color: #CCCCCC;
+	color: black;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid grey;
+	padding-left: 5px;
+	font-size: 14px;
+}
+.widget_content { /*Conteúdos da div rightside*/
+	text-align: center;/*Alinhando os ícones que são tags <a>*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.noticias_content {
+	color: black;
+	text-align: left;
+	margin: 0 7px;/*IMPORTANTE*/
+	padding: 7px 0;/*IMPORTANTE*/
+	border-bottom: 1px solid grey;
+}
+.noticias_content a {
+	color: black;
+}
+.pub1 {
+	cursor: pointer;
+	width: 273px;
+	height: 179px;
+	background-image: url(../images/naviochegada2.jpg);
+	background-size: cover !important;
+	background-repeat: no-repeat;
+	transition: all .2s linear;
+}
+.pub1:hover {
+	cursor: pointer;
+	background-image: url(../images/naviochegada.jpg);
+	transition: all .2s linear;
+}
+h4 {
+	margin: 0;
+	font-size: 40px;
+	font-family: Tiamat;
+	font-weight: bold;
+	position: relative;
+	top: 80px;
+}
+.no_face {
+	text-decoration: none;
+	color: white;
+}
+/*<------Rightside------>*/
+
+/*<------Leftside------>*/
+.leftside {
+	width: 753px;/*1040-275(rightside)- 12px de margin-left de rightside = 753px*/ 
+	height: 335px;/*TEMP*/
+	float: left;
+}
+
+/*<------IMPORTANTE-SLIDESHOW-JS----->*/
+.slideshow {
+	height: 335px;/*Altura do slideshow*/
+	background-color: #CCCCCC;
+	overflow: hidden;/*Prop diz o comportamento que a DIV vai ter quando houver algum conteúdo que passe da área dela. Pode ser hidden ou scroll ou auto*/
+	margin-bottom: 12px;
+}
+.slideshow_area {
+	width: 3012px;/*Para os slides ficarem LADO A LADO*/
+	height: 335px;/*Defino altura do slideshow_area*/
+	background-color: #DDD;
+	transition: all 1s;/*DEIXANDO O SLIDESHOW DE VAGAR*/
+}
+.slide {
+	height: 335px;/*Defino altura dos slides*/
+	float: left;/*Faço os slides ficarem um ao lado do outro à esquerda*/
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.slide_info {
+	font-family: Tiamat;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 75px;
+	margin-top: 260px; /*335px(slideshow) - 75px(slide_info) = 260px*/
+	padding-left: 5px;
+}
+.slide_title {
+	font-size: 40px;
+	color: white;
+}
+.slide_subtitle {
+	font-size: 25px;
+	margin-top: -5px;
+}
+.slide_title a {
+	color: white;
+}
+/*<------bolinhas----->*/
+.bolas { /*Div onde fica as bolinhas*/
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+.bolinhas { /*bolinhas dentro da Div*/
+	width: 8px;
+	height: 8px;
+	border-radius: 70px;
+	float: left;
+	margin-right: 5px;
+	background-color: white;
+	cursor: pointer;
+	border: 1px solid black;
+}
+/*<------IMPORTANT-SLIDESHOW-JS----->*/
+
+/*<------ABAIXO DE-SLIDESHOW----->*/
+
+/*<------LADO DIREITO----->*/
+.widget2 {
+	border: 1px solid grey;
+	margin-bottom: 10px;
+}
+.widget_title2 {
+	color: black;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid grey;
+	padding-left: 5px;
+	font-size: 14px;
+	background-color: #CCCCCC;
+}
+.widget_content2 { /*Conteúdos da div rightside*/
+	text-align: center;/*Alinhando os ícones que são tags <a>*/
+}
+.noticias_content2 {
+	color: black;
+	text-align: left;
+}
+.areanoticia2 {
+	width: 320px;
+	height: 88px;
+	float: left;
+	margin-top: 7px;
+	margin-bottom: 5px;
+	margin-left: 4px;
+}
+.noticiaimagem {
+	border: 1px solid #CCCCCC;
+	width: 80px;
+	height: 80px;
+	padding: 3px;
+	float: left;
+}
+.noticia_title {
+	font-size: 13px;
+	width: 220px;
+	float: left;
+	margin-left: 6px;
+	text-align: justify;
+	
+}
+.noticia_info {
+	font-size: 13px;
+	color: #999999;
+	width: 220px;
+	float: left;
+	text-align: justify;
+	margin-left: 6px;
+	margin-top: 4px;
+}
+
+/*<------LADO DIREITO----->*/
+
+/*<------LADO ESQUERDO----->*/
+.areanoticia1 {
+	width: 422px;
+	height: 400px;
+	float: left;
+	margin-top: 7px;
+	margin-left: 4px;
+}
+.background-image {
+	border: 1px solid #CCCCCC;
+	width: 420px;
+	height: 250px;
+}
+.video_title {
+	font-size: 34px;
+	width: 418px;
+	float: left;
+	font-family: Tiamat;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: relative;
+	top: -48px;
+	text-align: center;
+}
+.noticia_title1 {
+	width: 420px;
+	float: left;
+	margin-top: -35px;
+	font-size: 20px;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+.noticia_info1 {
+	font-size: 16px;
+	color: #999999;
+	width: 220px;
+	height: 20px;
+	float: left;
+	text-align: justify;
+	margin-top: 15px;
+}
+/***************CONTAINERINSIDE***************/
+
+/***************FOOTER***************/
+.footer {
+	width: 100%;
+	height: 122px;
+	background-color: black;
+	background-color: #333333;
+	position: absolute;
+	top: 1010px;
+}
+.footer_inside {
+	width: 100%;
+	height: 122px;
+	max-width: 1040px;
+	margin: auto;
+	
+}
+.footer_contents {
+	width: 100%;
+	max-width: 610px;
+	height: 122px;
+	margin: auto;
+	
+}
+.footer_texto {
+	line-height: 122px;
+	float: left;
+	font-size: 15px;
+	color: white;
+	float: left;
+}
+.footer_inside a {
+	text-decoration: none;
+	color: white;
+}
+.footer_inside a:hover {
+	text-decoration: none;
+	color: #7685c1;
+}
+.logow {
+	width: 110px;
+	height: 110px;
+	float: left;
+	padding-left: 15px;
+}
+.selo {
+	width: 70px;
+	height: 90px;
+	float: left;
+	margin-top: 7px;
+	padding-left: 15px;
+	position: relative;
+	top: 10px;
+}
+
+
+/***************FOOTER***************/
+
+/***************MEDIA QUERY - RESONSIVIDADE***************/
+@media only screen and (min-width: 1057px) {
+	#menu {
+		/*Fazer os menus continuarem aparecendo quando voltarem para tela normal*/
+		display: block !important;
+	}
+} 
+
+@media only screen and (min-width: 907px) and (max-width: 1056px) {
+	/*TELA PEQUENA*/
+	/*Esse mediaquery vai ser aplicado ENTRE esses tamanhos 907px e 1056px*/
+	/*Toda questão de responsivo, trata de configurar um novo limite de width p os elementos*/
+	.insidetop,
+	.top2inside,
+	.insidemenu,
+	.ultimasinside,
+	.containerinside {
+		max-width: 890px;
+	}
+	.leftside {
+		width: 603px;
+	}
+	.areanoticia1 {
+		width: 273px;
+	}
+	.background-image {
+		width: 270px;
+		height: 386px;
+	}
+	video {
+		width: 269px;
+		margin-top: -45px
+	}
+	.video_title {
+		width: 268px;
+		font-size: 22px;
+		position: relative;
+		top: -76px;
+	}
+	.noticia_title1 {
+		margin-top: -70px;
+		width: 255px;
+		height: 150px;
+		margin-left: 6px;
+		font-size: 18px;
+	}
+	.noticia_info1 {
+		margin-top: 40px;
+		margin-left: 6px;
+	}
+	.footer {
+		position: relative;
+		top: 460px;
+	}
+	#menu {
+		/*Fazer os menus continuarem aparecendo quando voltarem para tela normal*/
+		display: block !important;
+	}
+}
+
+@media only screen and (min-width: 771px) and (max-width: 906px) {
+	/*Aplicado entre telas de 771px e 906px*/
+	/*TABLET 906px*/
+	.insidetop,
+	.top2inside,
+	.insidemenu,
+	.ultimasinside,
+	.containerinside {
+		max-width: 768px;/*TABLET*/
+	}
+	.banner {
+		max-width: 520px;
+		/*ou display:none*/
+	}
+	.leftside {
+		margin: auto;
+		float: left;
+	}
+	.rightside {
+		width: 427px;
+		float: left;
+		margin-top: 460px;
+		margin-left: 0;
+	}
+	#wiz_face {
+		position: absolute;
+		top: 1010px;
+		margin-left: 435px;
+		width: 317px;
+	}
+	#nosso_face {
+		position: absolute;
+		top: 1134px;
+		margin-left: 435px;
+		width: 317px;
+	}
+	.pub1 {
+		width: 317px;
+		height: 226px;
+	}
+	.pub1 h4 {
+		position: relative;
+		top: 130px;
+	}
+	.areanoticia1 {
+		width: 423px;
+		margin-top: 7px;
+	}
+	.background-image {
+		width: 420px;
+		height: 386px;
+	}
+	video {
+		width: 415px;
+		height: 300px;
+		margin-top: -27px;
+		margin-left: 2px;
+	}
+	.video_title {
+		width: 415px;
+		font-size: 34px;
+		position: relative;
+		top: -74px;
+		margin-left: 2px;
+	}
+	.noticia_title1 {
+		margin-top: -60px;
+		width: 400px;
+		height: 150px;
+		margin-left: 6px;
+		font-size: 18px;
+	}
+	.noticia_info1 {
+		margin-top: -55px;
+		margin-left: 6px;
+	}
+
+	.footer {
+		position: relative;
+		top: 92px;
+	}
+	#menu {
+		/*Fazer os menus continuarem aparecendo quando voltarem para tela tablet*/
+		display: block !important;
+	}
+}
+@media only screen and (max-width: 770px) {
+	/*É aplicado quando a tela diminui e os alementos se alteram*/
+	/*CELULAR-320px é o PADRÃO MÁXIMO DE LARGURA*/
+	/*Em alguns casos, alguns itens deve SUMIR do layout. Decidir quem fica e quem sai*/
+	.insidetop,
+	.top2inside,
+	.insidemenu,
+	.ultimasinside,
+	.containerinside,
+	.leftside {
+		max-width: 320px;/*TABLET*/
+
+	}
+	.topoleft {
+		display: none;
+	}
+	.toporight {
+		width: 318px;
+		float: none;
+		margin: auto;
+	}
+	.toporight img {
+		margin-right: 3px;
+		line-height: 
+	}
+	.topobusca {
+		width: 137px;
+	}
+	.logo {
+		float: none;
+		margin: auto;
+	}
+	.banner {
+		display: none;
+		/*ou display:none*/
+	}
+	.menu {
+		width: 320px;
+		margin: auto;
+	}
+	/**********MENU P CELULAR**********/
+	/*No HTML, antes do UL, setar o ícone IMG do menu (três tracinhos)*/
+	/*Transformar o menu em flutuante(absolute) p ficar em cima de todo o site*/
+
+	.menu_mobile {
+		display: block;
+	}
+	.menu ul {
+		display: none;/*Para os MENUS DESAPARECEREM*/
+		position: absolute;
+		background: red; /*colocar a cor de todo o menu*/
+		z-index: 10; /*Nível 10 -Para fazer o elemento ficar ACIMA de tudo*/
+	}
+	
+	.menu li {
+		float: none;/*Para fazer os menus ficarem um abaixo do outro*/
+		/*Acertando o submenu-Já devem estar abertos. Remover altura dos "li"*/
+		height: auto;/*Altura automática*/
+	}
+	.menu li img {
+		display: none;/*Removendo as "setinhas"*/
+	}
+	.subsist {
+		/*Fazendo os submenus aparecer permanente*/
+		position: static;
+		display: block;
+		margin-left: 7px;
+	}
+	.subcena {
+		/*Fazendo os submenus aparecer permanente*/
+		position: static;
+		display: block;
+		margin-left: 7px;
+	}
+	.subavent {
+		/*Fazendo os submenus aparecer permanente*/
+		position: static;
+		display: block;
+		margin-left: 7px;
+	}
+	/**********MENU P CELULAR**********/
+	.ultimasnoticias {
+		display: none;
+	}
+	.slideshow {
+		margin-top: 10px;
+	}
+	.leftside {
+		margin: auto;
+		float: none;
+	}
+	.rightside {
+		width: 320px;
+		margin-top: 460px;
+		margin-left: 0;
+		position: relative;
+		top: 393px;
+	}
+	.slide_info {
+		width: 315px;
+		margin-top: 266px;
+	}
+	.slide_title {
+		width: 317px;
+		font-size: 30px;
+	}
+	.slide_subtitle {
+		width: 315px;
+		font-size: 30px;
+	}
+	#wiz_face {
+		position: absolute;
+		top: 390px;
+		margin: auto;
+		width: 318px;
+	}
+	#nosso_face {
+		position: absolute;
+		top: 513px;
+		margin: auto;
+		width: 318px;
+	}
+	.pub1 {
+		width: 317px;
+		height: 226px;
+	}
+	.pub1 h4 {
+		position: relative;
+		top: 130px;
+	}
+	.areanoticia1 {
+		width: 319px;
+		height: auto;
+		margin-top: 7px;
+	}
+	.areanoticia2 {
+		width: 318px
+	}
+	.noticia_title {
+		float: left;
+		width: 210px;
+	}
+	.background-image {
+		width: 310px;
+		height: 389px;
+	}
+	video {
+		width: 307px;
+		height: 245px;
+		margin-top: -32px;
+		margin-left: 1px;
+	}
+	.video_title {
+		width: 305px;
+		font-size: 25px;
+		position: relative;
+		text-align: justify;
+		top: -67px;
+		margin-left: 2px;
+	}
+	.noticia_title1 {
+		margin-top: -60px;
+		width: 290px;
+		height: 150px;
+		margin-left: 6px;
+		font-size: 18px;
+		text-align: justify;
+	}
+	.noticia_info1 {
+		margin-top: 20px;
+		margin-left: 6px;
+	}
+	.footer {
+		max-width: 100%;
+		position: absolute;
+		top: 2150px
+	}
+	.footer_contents {
+		max-width: 320px;
+	}
+	.footer_texto {
+		font-size: 12px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+	.logow {
+		margin-top: -25px;
+		position: relative;
+		left: 30px;
+	}
+	.selo {
+		margin-top: -20px;
+		position:relative;
+		left: 30px;
+	}
+}
